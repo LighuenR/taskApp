@@ -1,19 +1,23 @@
 <template>
-    <v-app-bar color="primary">
-        <v-container>
-            <h1>
-                Boilerplate Vue3
-            </h1>
-        </v-container>
-    </v-app-bar>
-</template>
-
-<script>
+    <v-app id="inspire">
+      <v-navigation-drawer v-model="drawer">
+        <!--  -->
+      </v-navigation-drawer>
+  
+      <v-app-bar>
+        <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+  
+        <v-toolbar-title>Application</v-toolbar-title>
+      </v-app-bar>
+  
+      <v-main>
+        <!--  -->
+      </v-main>
+    </v-app>
+  </template>
+  
+  <script>
     export default {
-        
+      data: () => ({ drawer: null }),
     }
-</script>
-
-<style lang="scss" scoped>
-
-</style>
+  </script>
