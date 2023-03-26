@@ -11,7 +11,7 @@
           <v-list-item-subtitle>Not ready</v-list-item-subtitle>
           </v-container>
      
-          <v-list-item prepend-icon="mdi-email" title="Todo" value="inbox"></v-list-item>
+          <v-list-item prepend-icon="mdi-view-dashboard" title="Todo" value="inbox"></v-list-item>
           <v-list-item prepend-icon="mdi-account-supervisor-circle" title="Supervisors" value="supervisors"></v-list-item>
         </v-list>
       </v-navigation-drawer>
@@ -23,7 +23,7 @@
       </v-app-bar>
   
       <v-main>
-        <!--  -->
+       <router-view></router-view>
       </v-main>
     </v-app>
   </template>
