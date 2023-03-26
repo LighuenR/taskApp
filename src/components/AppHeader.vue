@@ -6,16 +6,20 @@
         theme="dark"
       >
         <v-list  nav>
-          <v-list-item prepend-icon="mdi-email" title="Inbox" value="inbox"></v-list-item>
+          <v-container>
+          <v-list-item-title>Vuetify Todo</v-list-item-title>
+          <v-list-item-subtitle>Not ready</v-list-item-subtitle>
+          </v-container>
+     
+          <v-list-item prepend-icon="mdi-email" title="Todo" value="inbox"></v-list-item>
           <v-list-item prepend-icon="mdi-account-supervisor-circle" title="Supervisors" value="supervisors"></v-list-item>
-          <v-list-item prepend-icon="mdi-clock-start" title="Clock-in" value="clockin"></v-list-item>
         </v-list>
       </v-navigation-drawer>
   
       <v-app-bar>
         <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
   
-        <v-toolbar-title>Application</v-toolbar-title>
+        <v-toolbar-title>Aplication</v-toolbar-title>
       </v-app-bar>
   
       <v-main>
