@@ -1,5 +1,4 @@
 <template>
-  <v-app id="inspire">
     <v-navigation-drawer v-model="drawer" app theme="dark">
       <v-list nav>
         <v-container>
@@ -16,19 +15,13 @@
     </v-navigation-drawer>
 
 
-    <v-app-bar app color="teal-darken-4" image="https://picsum.photos/1920/">
+    <v-app-bar app color="teal-darken-4" image="https://picsum.photos/id/230/1920/1080">
 
-    
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-app-bar-title>Vuetify Todo</v-app-bar-title>
 
     </v-app-bar>
 
-
-    <v-main>
-      <router-view></router-view>
-    </v-main>
-  </v-app>
 </template>
   
 <script>
