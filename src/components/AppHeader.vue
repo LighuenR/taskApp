@@ -11,8 +11,10 @@
           <v-list-item-subtitle>Not ready</v-list-item-subtitle>
           </v-container>
      
-          <v-list-item prepend-icon="mdi-view-dashboard" title="Todo" value="inbox"></v-list-item>
-          <v-list-item prepend-icon="mdi-account-supervisor-circle" title="Supervisors" value="supervisors"></v-list-item>
+          <v-list-item to="/" prepend-icon="mdi-view-dashboard" title="Home" value="Indox"></v-list-item>
+          <v-list-item to="/about" prepend-icon="mdi-account-supervisor-circle" title="About" value="supervisors"></v-list-item>
+          <v-list-item to="/todo" prepend-icon="mdi-account-supervisor-circle" title="Todo" value="supervisors"></v-list-item>
+
         </v-list>
       </v-navigation-drawer>
   
