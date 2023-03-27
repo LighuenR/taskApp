@@ -13,7 +13,7 @@
      
           <v-list-item to="/" prepend-icon="mdi-view-dashboard" title="Home" value="Indox"></v-list-item>
           <v-list-item to="/about" prepend-icon="mdi-account-supervisor-circle" title="About" value="supervisors"></v-list-item>
-          <v-list-item to="/todo" prepend-icon="mdi-account-supervisor-circle" title="Todo" value="supervisors"></v-list-item>
+          <v-list-item to="/todo" prepend-icon="mdi-format-list-checks" title="Todo" value="supervisors"></v-list-item>
 
         </v-list>
       </v-navigation-drawer>
