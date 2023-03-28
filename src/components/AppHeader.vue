@@ -15,7 +15,7 @@
     </v-navigation-drawer>
 
 
-    <v-app-bar density="prominent" app color="teal-darken-4" image="https://picsum.photos/id/2/1920/1080">
+    <v-app-bar density="prominent" app color="primary" image="https://picsum.photos/id/2/1920/1080">
 
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-app-bar-title>Vuetify Todo</v-app-bar-title>

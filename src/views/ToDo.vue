@@ -1,10 +1,58 @@
 <template>
    <v-container>
-    <h1>Estas en ToDo</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptate rerum dignissimos! Architecto vel
-            delectus rem ipsam quis minima ullam nesciunt dolore culpa voluptatem, error a! Repellat aliquid, aspernatur
-            natus suscipit ea accusantium consectetur dolore odio vel nemo debitis eveniet rem quod voluptatem, deserunt
-            ratione dignissimos dicta, voluptatum aut molestias.</p>
+    <v-card
+    class="mx-auto"
+    max-width="400"
+  >
+
+
+    <v-list lines="three" select-strategy="classic">
+      
+
+      <v-list-item value="notifications">
+        <template v-slot:prepend="{ isActive }">
+
+          <v-list-item-action start>
+            <v-checkbox-btn :model-value="isActive"></v-checkbox-btn>
+          </v-list-item-action>
+        </template>
+
+        <v-list-item-title>Notifications</v-list-item-title>
+
+        <v-list-item-subtitle>
+          Notify me about updates to apps or games that I downloaded
+        </v-list-item-subtitle>
+      </v-list-item>
+
+      <v-list-item value="sound">
+        <template v-slot:prepend="{ isActive }">
+          <v-list-item-action start>
+            <v-checkbox-btn :model-value="isActive"></v-checkbox-btn>
+          </v-list-item-action>
+        </template>
+
+        <v-list-item-title>Sound</v-list-item-title>
+
+        <v-list-item-subtitle>
+          Auto-update apps at any time. Data charges may apply
+        </v-list-item-subtitle>
+      </v-list-item>
+
+      <v-list-item value="widgets">
+        <template v-slot:prepend="{ isActive }">
+          <v-list-item-action start>
+            <v-checkbox-btn :model-value="isActive"></v-checkbox-btn>
+          </v-list-item-action>
+        </template>
+
+        <v-list-item-title>Auto-add widgets</v-list-item-title>
+
+        <v-list-item-subtitle>
+          Automatically add home screen widgets when downloads complete
+        </v-list-item-subtitle>
+      </v-list-item>
+    </v-list>
+  </v-card>
    </v-container>
 </template>
 
