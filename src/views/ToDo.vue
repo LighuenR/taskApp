@@ -1,67 +1,44 @@
 <template>
-   <v-container>
-    <v-card
-    class="mx-auto"
-    max-width="400"
-  >
 
-
-    <v-list lines="three" select-strategy="classic">
-      
-
-      <v-list-item value="notifications">
-        <template v-slot:prepend="{ isActive }">
-
-          <v-list-item-action start>
-            <v-checkbox-btn :model-value="isActive"></v-checkbox-btn>
-          </v-list-item-action>
-        </template>
-
-        <v-list-item-title>Notifications</v-list-item-title>
-
-        <v-list-item-subtitle>
-          Notify me about updates to apps or games that I downloaded
-        </v-list-item-subtitle>
-      </v-list-item>
-
-      <v-list-item value="sound">
-        <template v-slot:prepend="{ isActive }">
-          <v-list-item-action start>
-            <v-checkbox-btn :model-value="isActive"></v-checkbox-btn>
-          </v-list-item-action>
-        </template>
-
-        <v-list-item-title>Sound</v-list-item-title>
-
-        <v-list-item-subtitle>
-          Auto-update apps at any time. Data charges may apply
-        </v-list-item-subtitle>
-      </v-list-item>
-
-      <v-list-item value="widgets">
-        <template v-slot:prepend="{ isActive }">
-          <v-list-item-action start>
-            <v-checkbox-btn :model-value="isActive"></v-checkbox-btn>
-          </v-list-item-action>
-        </template>
-
-        <v-list-item-title>Auto-add widgets</v-list-item-title>
-
-        <v-list-item-subtitle>
-          Automatically add home screen widgets when downloads complete
-        </v-list-item-subtitle>
-      </v-list-item>
-    </v-list>
-  </v-card>
-   </v-container>
+        <v-card>
+            <v-list select-strategy="classic">
+                <div v-for="task in tasks" :key="task.id">
+                    <v-list-item >
+                        <template v-slot:prepend="{ isActive }">
+                            <v-list-item-action start>
+                                <v-checkbox-btn :model-value="isActive"></v-checkbox-btn>
+                            </v-list-item-action>
+                        </template>
+                        <v-list-item-title>{{ task.title }}</v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                </div>
+            </v-list>
+        </v-card>
+ 
 </template>
 
 <script>
-    export default {
-        
+export default {
+    data() {
+        return {
+            tasks: [
+                {
+                    id: 1,
+                    title: 'Wake up'
+                },
+                {
+                    id: 2,
+                    title: 'Study vue and vuetify'
+                },
+                {
+                    id: 3,
+                    title: 'Clean the house'
+                },
+            ]
+        }
     }
+}
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
