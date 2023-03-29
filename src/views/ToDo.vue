@@ -7,12 +7,14 @@
                         <v-list-item-action start>
                             <v-checkbox-btn :model-value="task.done"></v-checkbox-btn>
                         </v-list-item-action>
+                        
                     </template>
-                    <v-list-item-title
-                   :class="{ ' text-decoration-line-through': task.done }"
-                    >
+                    <v-list-item-title :class="{ ' text-decoration-line-through': task.done }">
                         {{ task.title }}
                     </v-list-item-title>
+                    <template v-slot:append>
+                        <v-btn @click="deleteTask(task.id)" color="black" icon="mdi-delete" variant="text"></v-btn>
+                    </template>
                 </v-list-item>
                 <v-divider></v-divider>
             </div>
@@ -51,6 +53,9 @@ export default {
         doneTask(id) {
             let task = this.tasks.filter(task => task.id === id)[0]
             task.done = !task.done
+        },
+        deleteTask(id) {
+           this.tasks = this.tasks.filter(task => task.id !== id)
         }
     }
 }
