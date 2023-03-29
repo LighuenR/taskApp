@@ -1,5 +1,11 @@
 <template>
     <v-card>
+        <v-text-field
+            label="Append inner"
+            append-inner-icon="mdi-map-marker"
+            variant="solo"
+          ></v-text-field>
+          <v-divider></v-divider>
         <v-list select-strategy="classic" class="pa-0">
             <div v-for="task in tasks" :key="task.id">
                 <v-list-item @click="doneTask(task.id)" :class="{ 'blue': task.done }">
