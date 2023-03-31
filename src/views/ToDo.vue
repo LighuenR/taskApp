@@ -1,9 +1,15 @@
 <template>
     <v-card>
         <v-text-field
-            label="Append inner"
-            append-inner-icon="mdi-map-marker"
+            v-model="newTaskTitle"
+            @click:append="addTask"
+            @keyup.enter="addTask"
+            class="pa-3"
+            label="Add Task"
+            append-inner-icon="mdi-plus"
             variant="solo"
+            hide-details
+            clearable
           ></v-text-field>
           <v-divider></v-divider>
         <v-list select-strategy="classic" class="pa-0">
@@ -33,6 +39,7 @@
 export default {
     data() {
         return {
+            newTaskTitle: '',
             tasks: [
                 {
                     id: 1,
@@ -62,6 +69,14 @@ export default {
         },
         deleteTask(id) {
            this.tasks = this.tasks.filter(task => task.id !== id)
+        },
+        addTask() {
+            let newTask = {
+                id: Date.now(),
+                title: this.newTaskTitle,
+                done: false
+            }
+            this.tasks.push(newTask)
         }
     }
 }
