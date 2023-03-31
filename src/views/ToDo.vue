@@ -77,6 +77,7 @@ export default {
                 done: false
             }
             this.tasks.push(newTask)
+            this.newTaskTitle = ''
         }
     }
 }
